@@ -1,0 +1,21 @@
+När använder man add respektive commit?
+
+add - när du har gjort ändringar och vill lägga till i staging area
+commit - när du vill göra dina ändringar "final" och tillgängliga för alla users.
+
+
+Vad är pull repektive push?
+pull - ladda ner nya versioner.
+push - ladda upp nya versioner, de som vi har committat.
+
+När använder man log respektive status?
+log - visar detaljerat allt som hänt i din branch, din senaste commit visas överst.
+Du får även commit-strängen som agerar id-nummer till alla commits.
+
+status - visar ganska enkelt vilken branch du är i, filer som inte är addade,
+filer som finns att commita.
+
+
+Hur kan man formulera sig i sina commit-meddelanden?
+Kortfattat vad du gjort i koden. Om du t.ex. har laggt till en
+main metod "added main", eller om du laggt till en funktion "added help function".
