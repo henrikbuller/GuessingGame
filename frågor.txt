@@ -1,3 +1,5 @@
+Jag siktar på VG :)
+
 När använder man add respektive commit?
 
 add - när du har gjort ändringar och vill lägga till i staging area
@@ -19,3 +21,39 @@ filer som finns att commita.
 Hur kan man formulera sig i sina commit-meddelanden?
 Kortfattat vad du gjort i koden. Om du t.ex. har laggt till en
 main metod "added main", eller om du laggt till en funktion "added help function".
+
+
+VG Frågor:
+
+REVERT
+revert ångrar en commit genom att skapa en ny commit.
+Det är därför ett säkert sätt att ångra ändringar, för det skriver inte över commit history.
+git commit kan bara köras på “commit level” och har ingen fil-funktionalitet
+
+Detta exempel skapar en ny version som ångrar ändringar
+gjorda av en specifik commit där jag lade till en textfil:
+git revert 3306284
+Output:
+Removing text.txt
+
+
+RESET
+reset tar en specificerad commit och återställer working directory,
+staging area och commit så det matchar repositoryt till commiten du angav.
+reset är användbart om du vill ändra din git history med dina ändringar.
+
+Säg att vi gör följande:
+git add Game.java
+
+Om vi vill ångra det och ta bort Game.java från stage:
+git reset HEAD TestGame.java
+Output:
+Unstaged changes after reset:
+M	TestGame.java
+M	testRunner.sh
+
+Eller om vi på commit-level vill backa en branch tillbaka två commits:
+git checkout henriks-branch git reset HEAD~2
+
+Av: Henrik Büller, java20
+20-10-21
