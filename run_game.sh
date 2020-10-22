@@ -30,4 +30,4 @@ echo $DONE
 echo $RMCLASS
 rm *.class
 
-dir
+ls
